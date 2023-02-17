@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.myBox{
+    color: red;
+}
+ul{
+    display: none;
+    list-style: none;
+}
+#inputtext:focus ~ ul {
+    display: block;
+    border: solid red 2px;
+    width: 30%;
+}
+ul li:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
