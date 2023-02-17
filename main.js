@@ -14,8 +14,14 @@ console.log(document.querySelectorAll('h2'));
 //Get element methods-2
 var boxNode = document.querySelector('.box2');
 console.log(boxNode);
-var aElement = boxNode.getElementsByTagName('p');
-console.log(aElement);
+var pElements = boxNode.getElementsByTagName('p');
+console.log(pElements);
+pElements[0].onclick = function (e) {
+    e.target.style.color = 'red';
+}
+// pElements[0].onclick = function (e) {
+//     e.target.style.color = 'black';
+// }
 //Get element methods -3
 
 //----------Dom attribute
@@ -149,4 +155,12 @@ buttonElement.onclick = function (e) {
     //bo hien tuong noi bot de chi click duoc button
     e.stopPropagation();
 }
-
+//eventListener
+function viec1() {
+    console.log('viec 1')
+}
+var clickPlease = document.querySelector('#clickPlease');
+clickPlease.addEventListener('click',viec1);
+setTimeout(function() {
+    clickPlease.removeEventListener('click', viec1);
+}, 5000)
